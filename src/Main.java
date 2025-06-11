@@ -6,25 +6,21 @@ public class Main {
         System.out.println("Welcome to this Calculator application!");
         Scanner input = new Scanner(System.in);
 
-        int inputNumber = 0; // Used for user input
-        int inputNumber2 = 0;
-
-        String continueInput = ""; // Prompts if user wishes to continue
-        int total = 0; // Used for answer
+        int total;
 
         boolean flag = true;
 
         // Recurring loop for calculator, until exit criteria is met
         while (flag) {
             System.out.println("Please enter a number: ");
-            inputNumber = input.nextInt();
+            int inputNumber = input.nextInt();
             input.nextLine(); // Consumes new line
 
             System.out.println("Please enter an operator (+, -, /, *): ");
             String operator = input.nextLine();
 
             System.out.println("Please enter a second number: ");
-            inputNumber2 = input.nextInt();
+            int inputNumber2 = input.nextInt();
 
             // Running main calc checks
             switch (operator) {
@@ -49,12 +45,12 @@ public class Main {
             }
 
             System.out.print("Do you wish to continue? ");
-            continueInput = input.nextLine();
+            input.nextLine();
+            String continueInput = input.nextLine();
+
 
             if (continueInput.equalsIgnoreCase("exit")) {
                 flag = false;
-            } else {
-                continue;
             }
         }
         input.close();
