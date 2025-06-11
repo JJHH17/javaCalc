@@ -1,6 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
+
+    public int sum(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public int sub(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    public int div(int num1, int num2) {
+        return num1 / num2;
+    }
+
+    public int multi(int num1, int num2) {
+        return num1 * num2;
+    }
+
     public static void main(String[] args) {
 
         System.out.println("Welcome to this Calculator application!");
@@ -42,7 +59,9 @@ public class Main {
                     break;
                 default:
                     System.out.println("Please enter a valid operator");
+
             }
+
 
             System.out.print("Do you wish to continue? ");
             input.nextLine();
