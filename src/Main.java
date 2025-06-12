@@ -11,15 +11,28 @@ public class Main {
 
         // Recurring loop for calculator, until exit criteria is met
         while (flag) {
-            System.out.println("Please enter a number: ");
-            int num1 = input.nextInt(); // Consumes new line
-            input.nextLine(); // Consumes new line
+            int num1 = 0;
+            int num2 = 0;
+
+
+            try {
+                System.out.println("Please enter a number: ");
+                num1 = input.nextInt(); // Consumes new line
+                input.nextLine(); // Consumes new line
+            } catch (Exception e) {
+                System.out.println("Please enter a valid number");
+            }
 
             System.out.println("Please enter an operator (+, -, /, *): ");
             String operator = input.nextLine();
 
-            System.out.println("Please enter a second number: ");
-            int num2 = input.nextInt(); // Consumes new line
+
+            try {
+                System.out.println("Please enter a second number: ");
+                num2 = input.nextInt(); // Consumes new line
+            } catch (Exception y) {
+                System.out.println("Please enter a valid number");
+            }
 
 
             // Running main calc checks
@@ -45,7 +58,7 @@ public class Main {
             input.nextLine();
             String continueInput = input.nextLine();
 
-            if (continueInput.equalsIgnoreCase("exit")) {
+            if (continueInput.equalsIgnoreCase("no")) {
                 flag = false;
             }
         }
